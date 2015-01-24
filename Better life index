@@ -1,0 +1,128 @@
+//Esther Bergé - minor databeleving - opdracht Better live index
+
+PFont myFont; // font bestand geimporteerd
+
+void setup() {
+  size(600, 670);
+  noStroke();
+  colorMode(HSB, 360, 100, 100);
+  
+  myFont = createFont("HelveticaNeue", 15);
+  textFont(myFont);
+}
+
+void draw() {
+  background(360, 0, 100);
+  
+  fill(0, 0, 0);
+  textSize(30);
+  text("Better life index", 180, 40);
+  textSize(20);
+  text("Heeft het aantal werkuren invloed op de grote van je huis?", 40, 90);
+
+
+//Australie, kamers pp 2,3, uren werk 14,23%
+  fill(value);
+  ellipse(100, 200, 85, 85);//uren werk
+  
+  fill(101, 95, 76);
+  ellipse(100, 200, 60, 60);//kamers pp
+  
+  textSize(12);
+  text("Australië", 75, 150);
+  
+// Brazilie, kamers pp 1,4, uren werk 10,74%   
+  fill(value);
+  ellipse(200, 250, 60, 60);//uren werk
+  
+  fill(26, 98, 98);
+  ellipse(200, 250, 40, 40);//kamers pp
+  
+  textSize(12);
+  text("Brazilië", 180, 215);
+  
+//Korea, kamers pp 1,4, uren werk 27,13%
+  fill(value);
+  ellipse(130, 350, 90, 90);//uren werk
+  
+  fill(26, 98, 98);
+  ellipse(130, 350, 40, 40);//kamers pp
+  
+  textSize(12);
+  text("Korea", 115, 300);
+  
+//Nederland, kamers pp 2, uren werk 0,59%
+  fill(value);
+  ellipse(300, 220, 60, 60);//uren werk
+  
+  fill(105, 42, 95);
+  ellipse(300, 220, 50, 50);//kamers pp
+  
+  textSize(12);
+  text("Nederland", 270, 185);
+  
+//Verenigde Staten, kamers pp 2,3, uren werk 11,44%
+  fill(value);
+  ellipse(280, 400, 80, 80);//uren werk
+  
+  fill(101, 95, 76);
+  ellipse(280, 400, 60, 60);//kamers pp
+  
+  textSize(12);
+  text("Verenigde Staten", 235, 355);
+
+//Zweden, kamers pp 1,7, uren werk 1,14%
+  fill(value);
+  ellipse(150, 480, 60, 60);//uren werk
+  
+  fill(105, 42, 95);
+  ellipse(150, 480, 50, 50);//kamers pp
+  
+  textSize(12);
+  text("Zweden", 130, 445);
+  
+
+//Legenda
+  fill(0, 0, 0);
+  textSize(12);
+  text("Legenda", 450, 400);  
+
+  fill(0, 96, 97);
+  textSize(12);
+  text("<1 kamer pp", 450, 420); 
+
+  fill(26, 98, 98);
+  textSize(12);
+  text("1 tot 1,5 kamers pp", 450, 435);
+  
+  fill(105, 42, 95);
+  textSize(12);
+  text("1,5 tot 2 kamers pp", 450, 450);
+  
+  fill(101, 95, 76);
+  textSize(12);
+  text(">2 kamers pp", 450, 465);
+  
+  fill(200);
+  rect(450, 480, 30, 50);
+  rect(450, 535, 30, 40);
+  rect(450, 580, 30, 30);
+  rect(450, 615, 30, 20);
+  rect(450, 640, 30, 10);
+  
+  text(">25%", 490, 495);
+  text("20 tot 25%", 490, 550);
+  text("15 tot 20%", 490, 600);
+  text("10 tot 15%", 490, 630);
+  text("<5%", 490, 650);
+  
+}
+
+  int value = 500;
+  void mouseClicked() {
+    if (value == 500) {
+      value = 200;
+    } else {
+      value = 500;
+    }
+}
